@@ -9,3 +9,9 @@
 .export-actions{display:flex;gap:8px}#imageDialog{width:min(680px,94vw);max-height:92vh;overflow:auto}#exportPreview{display:block;width:100%;height:auto;margin-top:16px;-webkit-touch-callout:default}.export-actions button:disabled{opacity:.6;cursor:wait}@media(max-width:650px){.toolbar{flex-wrap:wrap}.export-actions{width:100%;justify-content:flex-end}#imageDialog{padding:18px}}
 
 .cell-buttons{display:block;padding:0;gap:0}.row-counts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.row-counts label{margin:0 0 10px}.row-counts input{width:100%}@media(max-width:900px){#layoutSettings{grid-column:1/-1}}
+
+#backgroundPreview{display:block;width:100%;max-height:180px;object-fit:contain;border-radius:8px;margin:12px 0}.reveal-settings p{font-size:13px}.reveal-settings label{margin-top:12px}
+
+.board-shell.reveal-board{border-radius:0}.reveal-board .cell-buttons button{border-radius:0}
+
+#cropDialog{width:min(720px,95vw);max-height:94vh;overflow:auto}.crop-stage{background:#e7e9f2;display:flex;justify-content:center;align-items:center;padding:12px;margin:14px 0}#cropCanvas{width:auto;max-width:100%;height:auto;max-height:42vh;touch-action:none;cursor:grab}#cropCanvas:active{cursor:grabbing}#cropDialog input[type=range]{padding:0}#cropDialog .dialog-actions{flex-wrap:wrap}
