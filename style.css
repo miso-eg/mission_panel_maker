@@ -15,3 +15,29 @@
 .board-shell.reveal-board{border-radius:0}.reveal-board .cell-buttons button{border-radius:0}
 
 #cropDialog{width:min(720px,95vw);max-height:94vh;overflow:auto}.crop-stage{background:#e7e9f2;display:flex;justify-content:center;align-items:center;padding:12px;margin:14px 0}#cropCanvas{width:auto;max-width:100%;height:auto;max-height:42vh;touch-action:none;cursor:grab}#cropCanvas:active{cursor:grabbing}#cropDialog input[type=range]{padding:0}#cropDialog .dialog-actions{flex-wrap:wrap}
+
+.sharing button{margin:5px 0}.sharing p{font-size:13px}.sharing details{margin-top:15px}.sharing li{font-size:12px;margin-bottom:12px}.sharing li button{padding:5px;margin-left:5px}.sharing #sharingPeople div{display:flex;align-items:center;justify-content:space-between;gap:8px}#sharedPreview{max-height:250px;max-width:100%;object-fit:contain;display:block;margin:15px auto}#sharedConfirm,#sharedLinkDialog{max-height:90vh;overflow:auto;width:min(600px,94vw)}
+
+.shared-intro{max-width:1320px;margin:0 auto;padding:0 32px 20px}.shared-intro a{font-size:14px}
+
+#sharingCard.sharing-owner{grid-column:1/-1}
+
+body.sharing-ended > :not(#sharingEnded){display:none!important}body.sharing-ended{display:grid;min-height:100dvh;margin:0;place-items:center}#sharingEnded{margin:0;padding:24px;font-size:clamp(20px,4vw,28px);font-weight:700;text-align:center}
+
+body.supporter-view{background:#eef8f6}
+.supporter-view header{border-bottom:3px solid #168575;margin-bottom:22px}
+.supporter-view .logo{background:#13796b}
+#supporterBanner{color:#17695e;margin-top:8px;line-height:1.6}
+#supporterBanner strong{display:inline-block;background:#d0eee6;color:#115e52;border-radius:6px;padding:3px 10px;margin-right:8px;font-size:14px}
+#supporterBanner span{display:block;margin-top:6px;font-size:13px}
+.supporter-view #saveStatus,.supporter-view .toolbar,.supporter-view .guide,.supporter-view #imageSize{display:none}
+.supporter-view .card{border-color:#cce5df}
+.supporter-view .editor{border-top:4px solid #168575}
+.supporter-view .primary{background:#13796b;border-color:#13796b}
+.supporter-view .primary:hover{background:#0c6054}
+.supporter-view .total{color:#115e52;background:#e0f3ec}
+.supporter-view .eyebrow,.supporter-view .badge{color:#17695e}
+.supporter-view .cell-buttons button.selected{border-color:#168575}
+.supporter-view button:focus-visible,.supporter-view input:focus-visible{outline-color:#168575}
+
+#ownerSharingBanner{max-width:1256px;margin:0 auto 20px;padding:16px 20px;border:1px solid #c7bdf4;border-left:5px solid #5546df;border-radius:12px;background:#eeeaff;color:#3b2b87}#ownerSharingBanner strong{display:block;font-size:16px}#ownerSharingBanner strong span{color:#16834c;margin-right:5px}#ownerSharingBanner>span{display:block;font-size:13px;line-height:1.7;margin-top:5px}.settings-locked{color:#747087;background:#edeaf3!important}.settings-locked::after{content:" 🔒"}@media(max-width:1320px){#ownerSharingBanner{margin-left:32px;margin-right:32px}}@media(max-width:900px){#ownerSharingBanner{margin-left:16px;margin-right:16px}}
