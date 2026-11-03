@@ -1,0 +1,8 @@
+{
+  "name": "mission-panel-progress",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-03",
+  "vars": {"ALLOWED_ORIGIN": "https://miso-eg.github.io"},
+  "d1_databases": [{"binding":"DB","database_name":"mission-panel-progress","database_id":"21cd17e1-6045-401e-b94b-1ee8fbfae7bd"}],
+  "triggers": {"crons":["0 * * * *"]}
+}

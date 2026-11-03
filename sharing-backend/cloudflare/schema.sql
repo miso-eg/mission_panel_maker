@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS panel_rooms (
+  id TEXT PRIMARY KEY,
+  revision INTEGER NOT NULL,
+  expires INTEGER NOT NULL,
+  data TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS panel_rooms_expiry ON panel_rooms(expires);
+CREATE TABLE IF NOT EXISTS panel_rate_limits (
+  key TEXT PRIMARY KEY,
+  minute INTEGER NOT NULL,
+  count INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS panel_gift_images (room_id TEXT PRIMARY KEY REFERENCES panel_rooms(id) ON DELETE CASCADE, data TEXT NOT NULL);
+
+CREATE TABLE IF NOT EXISTS panel_daily_budget (id INTEGER PRIMARY KEY CHECK(id=1), day INTEGER NOT NULL, count INTEGER NOT NULL);
