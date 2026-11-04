@@ -18,8 +18,6 @@
 
 .sharing button{margin:5px 0}.sharing p{font-size:13px}.sharing details{margin-top:15px}.sharing li{font-size:12px;margin-bottom:12px}.sharing li button{padding:5px;margin-left:5px}.sharing #sharingPeople div{display:flex;align-items:center;justify-content:space-between;gap:8px}#sharedPreview{max-height:250px;max-width:100%;object-fit:contain;display:block;margin:15px auto}#sharedConfirm,#sharedLinkDialog{max-height:90vh;overflow:auto;width:min(600px,94vw)}
 
-.shared-intro{max-width:1320px;margin:0 auto;padding:0 32px 20px}.shared-intro a{font-size:14px}
-
 #sharingCard.sharing-owner{grid-column:1/-1}
 
 body.sharing-ended > :not(#sharingEnded){display:none!important}body.sharing-ended{display:grid;min-height:100dvh;margin:0;place-items:center}#sharingEnded{margin:0;padding:24px;font-size:clamp(20px,4vw,28px);font-weight:700;text-align:center}
@@ -41,3 +39,4 @@ body.supporter-view{background:#eef8f6}
 .supporter-view button:focus-visible,.supporter-view input:focus-visible{outline-color:#168575}
 
 #ownerSharingBanner{max-width:1256px;margin:0 auto 20px;padding:16px 20px;border:1px solid #c7bdf4;border-left:5px solid #5546df;border-radius:12px;background:#eeeaff;color:#3b2b87}#ownerSharingBanner strong{display:block;font-size:16px}#ownerSharingBanner strong span{color:#16834c;margin-right:5px}#ownerSharingBanner>span{display:block;font-size:13px;line-height:1.7;margin-top:5px}.settings-locked{color:#747087;background:#edeaf3!important}.settings-locked::after{content:" 🔒"}@media(max-width:1320px){#ownerSharingBanner{margin-left:32px;margin-right:32px}}@media(max-width:900px){#ownerSharingBanner{margin-left:16px;margin-right:16px}}
+#editor .actions{display:flex;flex-wrap:nowrap;gap:6px}#editor .actions button{flex:1 1 0;min-width:0;padding:10px 4px}.number-with-zero{min-width:0;margin-bottom:14px}.number-with-zero label{margin:0}.number-controls{display:flex;align-items:center;gap:6px;margin-top:7px}.number-controls input{flex:1;min-width:0;margin-top:0;appearance:textfield}.number-controls input::-webkit-inner-spin-button,.number-controls input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.number-controls>button{flex:0 0 28px;width:28px;height:28px;padding:0;border-radius:6px;font-size:12px;color:#858599;background:#f6f7fa;border-color:#e7e8ee}.image-picker{flex-wrap:wrap}.image-actions{display:flex;gap:12px;margin:12px 0}
