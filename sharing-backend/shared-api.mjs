@@ -12,7 +12,7 @@ function validateBoard(input) {
   if (!['normal','reveal'].includes(input.displayMode) || !['purple','blue','pink','orange'].includes(input.theme)) fail('表示設定が不正です');
   const panels = input.panels.map(p => {
     if (!p || !['gift','mission','free','empty'].includes(p.type) || typeof p.done !== 'boolean') fail('パネルが不正です');
-    for (const k of ['price','required','used']) if (!Number.isSafeInteger(p[k]) || p[k] < (k === 'required' ? 1 : 0) || p[k] > MAX) fail('数値が不正です');
+    for (const k of ['price','required','used']) if (!Number.isSafeInteger(p[k]) || p[k] < 0 || p[k] > MAX) fail('数値が不正です');
     if (p.text !== undefined && (typeof p.text !== 'string' || p.text.length > 2000)) fail('ミッション文が不正です');
     if(p.image)fail('画像は共有サーバーに送信できません');if(typeof p.sharedId!=='string'||!/^[0-9a-f-]{36}$/.test(p.sharedId)||ids.has(p.sharedId))fail('パネルIDが不正です');ids.add(p.sharedId);if(p.supporterNote!==undefined&&(typeof p.supporterNote!=='string'||p.supporterNote.length>100))fail('メモは100文字以内です');return {sharedId:p.sharedId,supporterNote:p.supporterNote||'',type:p.type,text:p.text||'',price:p.price,required:p.required,used:p.used,done:p.done};
   });
@@ -110,7 +110,7 @@ export async function api(request, store, allowedOrigin) {
         const field=action==='setDone'?'done':'used', before=p[field];
         if(field==='done' && p.type!=='mission' || field==='used' && p.type!=='gift')fail('パネルの種類が異なります');
         if(action==='increment') {
-          if(![-1,1,10].includes(data.delta))fail('加算数が不正です');
+          if(![-10,-1,1,10].includes(data.delta))fail('加算数が不正です');
           p.used=Math.min(MAX,Math.max(0,p.used+data.delta));
         } else {
           if(data.expected!==before)fail('別の更新が入りました。最新の値を確認して訂正してください',409);
